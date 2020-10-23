@@ -20,3 +20,6 @@ class TestGuest(unittest.TestCase):
 
     def test_guest_has_age(self):
         self.assertEqual(26, self.guest9.age)
+
+    def test_guest_has_a_preferred_genre(self):
+        self.assertEqual("Rap", self.guest5.preferred_genre)
