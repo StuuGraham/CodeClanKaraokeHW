@@ -11,3 +11,6 @@ class TestRoom(unittest.TestCase):
 
     def test_rooms_have_names(self):
         self.assertEqual("Timewarp", self.room3.name)
+
+    def test_rooms_have_genres(self):
+        self.assertEqual("Pop", self.room1.genre)
