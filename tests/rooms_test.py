@@ -4,8 +4,8 @@ from classes.rooms import Room
 class TestRoom(unittest.TestCase):
 
     def setUp(self):
-        self.room1 = Room("POPpin Bottles", "Pop", 8)
-        self.room2 = Room("Scream If You Want More", "Metal", 8)
+        self.room1 = Room("POP-pin Bottles", "Pop", 8)
+        self.room2 = Room("Screamo If You Want More", "Metal", 8)
         self.room3 = Room("Timewarp", "Golden Oldies", 8)
         self.room4 = Room("Get Lowww", "Rap", 8)
         self.room1.song_list = ["Angels", "C'est La Vie"]
