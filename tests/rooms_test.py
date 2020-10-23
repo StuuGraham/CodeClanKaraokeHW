@@ -14,3 +14,6 @@ class TestRoom(unittest.TestCase):
 
     def test_rooms_have_genres(self):
         self.assertEqual("Pop", self.room1.genre)
+
+    def test_rooms_have_capacities(self):
+        self.assertEqual(8, self.room2.capacity)
