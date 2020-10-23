@@ -24,3 +24,6 @@ class TestRoom(unittest.TestCase):
 
     def test_room_has_song_list(self):
         self.assertEqual(["Dreams", "Hotel California"], self.room3.song_list)
+
+    def test_add_guest_to_room(self):
+        

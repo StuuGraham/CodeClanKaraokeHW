@@ -15,6 +15,9 @@ class TestGuest(unittest.TestCase):
         self.guest9 = Guest("Lisa", 26, "Golden Oldies")
         self.guest10 = Guest("Alexa Bliss", 29, "Metal")
 
+        guests = [self.guest1, self.guest2, self.guest3, self.guest4, self.guest5
+                    self.guest6, self.guest7, self.guest8, self.guest9, self.guest10]
+
     def test_guest_has_name(self):
         self.assertEqual("Stuart", self.guest1.name)
 
