@@ -67,3 +67,7 @@ class TestRoom(unittest.TestCase):
     def test_guest_can_afford_room__true(self):
         self.room1.guest_can_afford_room(self.guest1)
         self.assertEqual("Come on in!", self.room1.guest_can_afford_room(self.guest1))
+
+    def test_guest_can_afford_room__false(self):
+        self.room3.guest_can_afford_room(self.guest6)
+        self.assertEqual("Sorry mate, you can't afford this", self.room3.guest_can_afford_room(self.guest6))
