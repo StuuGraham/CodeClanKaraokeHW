@@ -61,6 +61,9 @@ class TestRoom(unittest.TestCase):
         self.room3.add_song_to_room(self.song5)
         self.assertEqual(1, len(self.room3.song_list))
 
+    def test_room_has_entry_fee(self):
+        self.assertEqual(15, self.room1.entry_fee)
+
     # def test_guest_can_afford_room__true(self):
     #     self.room1.guest_can_afford_room(self.guest1)
     #     self.assertEqual("Come on in!", self.room1.guest_can_afford_room(self.guest1))
