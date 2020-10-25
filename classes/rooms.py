@@ -23,7 +23,7 @@ class Room:
         self.song_list.append(song)
 
     def guest_can_afford_room(self, guest):
-        if self.entry_fee >= guest.wallet:
-            print("Come on in!")
+        if self.entry_fee < guest.wallet:
+            return "Come on in!"
         else:
-            print("Sorry mate, you can't afford this")
+            return "Sorry mate, you can't afford this"
