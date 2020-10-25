@@ -47,3 +47,7 @@ class TestRoom(unittest.TestCase):
         self.room1.add_guest_to_room(self.guest1)
         self.assertEqual(1, len(self.room1.guest_list))
 
+    def test_if_room_full_KB(self):
+        self.room2.guest_list = [self.guest1, self.guest2, self.guest3, self.guest4]
+        self.room2.if_room_full_KB(self.guest5)
+        self.assertEqual(4, len(self.room2.guest_list))

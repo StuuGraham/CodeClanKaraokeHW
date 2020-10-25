@@ -14,3 +14,9 @@ class Room:
 
     def add_guest_to_room(self, guest):
         self.guest_list.append(guest)
+
+    def if_room_full_KB(self, guest):
+        if len(self.guest_list) < self.capacity:
+            self.guest_list.append(guest)
+        else:
+            print("Sorry! This room is full!")
