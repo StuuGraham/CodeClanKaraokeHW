@@ -31,8 +31,8 @@ class TestRoom(unittest.TestCase):
         self.song7 = Song("Till The End", "Logic", "Rap")
         self.song8 = Song("No Role Modelz", "J. Cole", "Rap")
 
-        guests = [self.guest1, self.guest2, self.guest3, self.guest4, self.guest5, 
-                self.guest6, self.guest7, self.guest8, self.guest9, self.guest10]
+        # guests = [self.guest1, self.guest2, self.guest3, self.guest4, self.guest5, 
+                # self.guest6, self.guest7, self.guest8, self.guest9, self.guest10]
         
     def test_rooms_have_names(self):
         self.assertEqual("Timewarp", self.room3.name)
@@ -56,3 +56,7 @@ class TestRoom(unittest.TestCase):
         self.room1.guest_list = [self.guest1, self.guest2, self.guest3, self.guest4]
         self.room1.guest_leaves_room(self.guest1)
         self.assertEqual(3, len(self.room1.guest_list))
+
+    def test_add_song_to_room(self):
+        self.room3.add_song_to_room(self.song5)
+        self.assertEqual(1, len(self.room3.song_list))
