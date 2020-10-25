@@ -1,10 +1,11 @@
 class Room:
-    def __init__(self, name, genre, capacity):
+    def __init__(self, name, genre, capacity, entry_fee):
         self.name = name
         self.genre = genre
         self.capacity = capacity
         self.song_list = []
         self.guest_list = []
+        self.entry_fee = entry_fee
 
     def add_guest_to_room(self, guest):
         self.guest_list.append(guest)
@@ -20,3 +21,9 @@ class Room:
 
     def add_song_to_room(self, song):
         self.song_list.append(song)
+
+    def guest_can_afford_room(self, guest):
+        if self.entry_fee >= guest.wallet:
+            print("Come on in!")
+        else:
+            print("Sorry mate, you can't afford this")

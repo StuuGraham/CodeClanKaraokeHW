@@ -6,21 +6,21 @@ from classes.guests import Guest
 class TestRoom(unittest.TestCase):
 
     def setUp(self):
-        self.room1 = Room("POP-pin Bottles", "Pop", 6)
-        self.room2 = Room("Screamo If You Want More", "Metal", 4)
-        self.room3 = Room("Timewarp", "Golden Oldies", 8)
-        self.room4 = Room("Get Lowww", "Rap", 4)
+        self.room1 = Room("POP-pin Bottles", "Pop", 6, 15)
+        self.room2 = Room("Screamo If You Want More", "Metal", 4, 10)
+        self.room3 = Room("Timewarp", "Golden Oldies", 8, 20)
+        self.room4 = Room("Get Lowww", "Rap", 4, 10)
 
-        self.guest1 = Guest("Stuart", 25, "Golden Oldies")
-        self.guest2 = Guest("Rhian", 25, "Pop")
-        self.guest3 = Guest("Michael", 24, "Pop")
-        self.guest4 = Guest("Emma", 25, "Pop")
-        self.guest5 = Guest("Liam", 25, "Rap")
-        self.guest6 = Guest("Caragh", 26, "Metal")
-        self.guest7 = Guest("Andrew", 25, "Metal")
-        self.guest8 = Guest("Mirza", 25, "Rap")
-        self.guest9 = Guest("Lisa", 26, "Golden Oldies")
-        self.guest10 = Guest("Alexa Bliss", 29, "Metal")
+        self.guest1 = Guest("Stuart", 25, "Golden Oldies", 40)
+        self.guest2 = Guest("Rhian", 25, "Pop", 40)
+        self.guest3 = Guest("Michael", 24, "Pop", 60)
+        self.guest4 = Guest("Emma", 25, "Pop", 30)
+        self.guest5 = Guest("Liam", 25, "Rap", 50)
+        self.guest6 = Guest("Caragh", 26, "Metal", 5)
+        self.guest7 = Guest("Andrew", 25, "Metal", 40)
+        self.guest8 = Guest("Mirza", 25, "Rap", 75)
+        self.guest9 = Guest("Lisa", 26, "Golden Oldies", 50)
+        self.guest10 = Guest("Alexa Bliss", 29, "Metal", 100)
 
         self.song1 = Song("Angels", "Robbie Williams", "Pop")
         self.song2 = Song("C'est La Vie", "Bewitched", "Pop")
@@ -60,3 +60,7 @@ class TestRoom(unittest.TestCase):
     def test_add_song_to_room(self):
         self.room3.add_song_to_room(self.song5)
         self.assertEqual(1, len(self.room3.song_list))
+
+    # def test_guest_can_afford_room__true(self):
+    #     self.room1.guest_can_afford_room(self.guest1)
+    #     self.assertEqual("Come on in!", self.room1.guest_can_afford_room(self.guest1))
