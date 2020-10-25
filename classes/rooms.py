@@ -20,3 +20,6 @@ class Room:
             self.guest_list.append(guest)
         else:
             print("Sorry! This room is full!")
+
+    def guest_leaves_room(self, guest):
+        self.guest_list.remove(guest)

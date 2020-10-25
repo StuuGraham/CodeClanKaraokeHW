@@ -51,3 +51,8 @@ class TestRoom(unittest.TestCase):
         self.room2.guest_list = [self.guest1, self.guest2, self.guest3, self.guest4]
         self.room2.if_room_full_KB(self.guest5)
         self.assertEqual(4, len(self.room2.guest_list))
+
+    def test_guest_leaves_room(self):
+        self.room1.guest_list = [self.guest1, self.guest2, self.guest3, self.guest4]
+        self.room1.guest_leaves_room(self.guest1)
+        self.assertEqual(3, len(self.room1.guest_list))
